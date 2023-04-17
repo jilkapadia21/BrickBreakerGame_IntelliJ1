@@ -28,10 +28,11 @@ public class Breakout {
         labelPanel.add(nameLabel);
         panel.add(labelPanel, BorderLayout.NORTH);
 
+        JTextField nameField = new JTextField();
+        nameField.setFont(new Font("Arial", Font.PLAIN, 20));
+        panel.add(nameField, BorderLayout.SOUTH);
+
         while (true) {
-            JTextField nameField = new JTextField();
-            nameField.setFont(new Font("Arial", Font.PLAIN, 20));
-            panel.add(nameField, BorderLayout.SOUTH);
             int result = JOptionPane.showConfirmDialog(null, panel, "", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
             if (result == JOptionPane.OK_OPTION) {
                 String playerName = nameField.getText();
@@ -53,5 +54,32 @@ public class Breakout {
                 System.exit(0); // Exit program if Cancel button was clicked
             }
         }
+
+
+//        while (true) {
+//            JTextField nameField = new JTextField();
+//            nameField.setFont(new Font("Arial", Font.PLAIN, 20));
+//            panel.add(nameField, BorderLayout.SOUTH);
+//            int result = JOptionPane.showConfirmDialog(null, panel, "", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+//            if (result == JOptionPane.OK_OPTION) {
+//                String playerName = nameField.getText();
+//                if (!playerName.isEmpty()) {
+//                    GamePlay gamePlay = new GamePlay();
+//                    gamePlay.setPlayerName(playerName);
+//                    JFrame frame = new JFrame();
+//                    frame.setBounds(10, 10, 700, 600);
+//                    frame.setTitle("Brick Breaker");
+//                    frame.setResizable(false);
+//                    frame.setVisible(true);
+//                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                    frame.add(gamePlay);
+//                    break; // Exit loop if a valid name was entered
+//                } else {
+//                    JOptionPane.showMessageDialog(null, "Please enter your name to continue.");
+//                }
+//            } else {
+//                System.exit(0); // Exit program if Cancel button was clicked
+//            }
+//        }
     }
 }
