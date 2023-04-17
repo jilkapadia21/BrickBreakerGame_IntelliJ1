@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class GameScore {
-    private final DatabaseConnection dbConnection; // changed to final( in case problem occurs remove final)
+    private DatabaseConnection dbConnection; // changed to final( in case problem occurs remove final)
 
     public GameScore() {
         dbConnection = new DatabaseConnection();
