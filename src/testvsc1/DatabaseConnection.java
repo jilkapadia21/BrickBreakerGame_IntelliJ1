@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DatabaseConnection {
     private String jdbcUrl = "jdbc:mysql://localhost:3306/brickbreaker";
     private String username = "root";
-    private String password = "sqllavina123";
+    private String password = "*";
 
     public Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");
